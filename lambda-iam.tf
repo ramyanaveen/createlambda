@@ -1,7 +1,7 @@
 resource "aws_iam_role_policy" "lambda_ramya_policy" {
   name = "lambda_ramya_policy"
   role = "$(aws_iam_role.lambda_ramya_role.id)"
-  policy = {file("iam/iam-policy.json")
+  policy = file("iam/iam-policy.json")
 
 }
 
